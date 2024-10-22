@@ -112,7 +112,6 @@ header {
   position: absolute;
   left: 0em;
   top: 3em;
-  @include center-element;
 
   a {
     display: block;
@@ -126,33 +125,32 @@ header {
   position: absolute;
   right: 0em;
   top: 2.2em;
-  @include center-element;
-
+  
   ul {
     li {
-      float: left;
-    }
+        float: left;
+    
   
-    li:last-child {
-      padding-right: 0;
-    }
+      &:last-child {
+        padding-right: 0;
+      }
   
-    li a,
-    li span {
-      display: block;
-      margin-left: 0.7em;
-      padding: 0.80em 1.2em;
-      letter-spacing: 0.06em;
-      text-transform: $all-caps;
-      font-size: $medium-txt;
-      outline: 0;
-      color: #333;
-    }
+      a, span {
+        display: block;
+        margin-left: 0.7em;
+        padding: 0.80em 1.2em;
+        letter-spacing: 0.06em;
+        text-transform: $all-caps;
+        font-size: $medium-txt;
+        outline: 0;
+        color: #333;
+      }
   
-    li.active a {
-      background: $link-color;
-      border-radius: 5px;
-      color: $white;
+      &.active a {
+        background: $link-color;
+        border-radius: 5px;
+        color: $white;
+      }
     }
   }
 }
@@ -207,53 +205,49 @@ header {
 
   .marketing {
     position: relative;
+  }
   
-      header {
-      @include center-element;
-      h2 {
-      font-size: $big-txt;
-      }
-    }
+  .marketing header h2 {
+    font-size: $big-txt;
   }
 
-  .sidebar {
-    header h2 {
+  .sidebar header h2 {
     font-size: $big-txt;
-    }
-    //sidebar - vertrical image list
-    ul.style2 {
-      margin: 0;
+  }
   
-      li {
-        padding: 1.90em 0em 1.60em 0em;
-        border-top: 1px solid;
-        border-color: rgba(0, 0, 0, .1);
-      }
-    
-      li:first-child {
-        padding-top: 0;
-        border-top: 0;
-      }
-    
-      img {
-        float: left;
-        padding-right: 1em;
-      }
+  //sidebar - vertrical image list
+  ul.style2 {
+    margin: 0;
+  
+    li {
+      padding: 1.90em 0em 1.60em 0em;
+      border-top: 1px solid;
+      border-color: rgba(0, 0, 0, .1);
     }
-    //rightmost sidebar - vertical list of links, 2 sections
-    ul.style1 {
-      margin: 0;
+    
+    li:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+    
+    img {
+      float: left;
+      padding-right: 1em;
+    }
+  }
+  //rightmost sidebar - vertical list of links, 2 sections
+  ul.style1 {
+    margin: 0;
  
-      li {
-        padding: 0.60em 0em;
-        border-top: 1px solid;
-        border-color: rgba(0, 0, 0, .1);
-      }
+    li {
+      padding: 0.60em 0em;
+      border-top: 1px solid;
+      border-color: rgba(0, 0, 0, .1);
+    }
 
-      li:first-child {
-        padding-top: 0;
-        border-top: 0;
-      }
+    li:first-child {
+      padding-top: 0;
+      border-top: 0;
     }
   }
 }
@@ -347,7 +341,6 @@ horizontal, 3 cards = image, title, text, button*/
   position: relative;
   color: rgba(255, 255, 255, .4);
   margin-top: 1em;
-  @include center-element;
   
   //pt1 - headings
   h2 {
@@ -420,8 +413,6 @@ horizontal, 3 cards = image, title, text, button*/
       line-height: 0;
     }
   }
-
-  //pt5 - paragraph
 }
 
 
