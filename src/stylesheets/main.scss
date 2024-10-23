@@ -121,39 +121,7 @@ header {
 }
 
 //nav
-.nav {
-  position: absolute;
-  right: 0em;
-  top: 2.2em;
-  
-  ul {
-    li {
-        float: left;
-    
-  
-      &:last-child {
-        padding-right: 0;
-      }
-  
-      a, span {
-        display: block;
-        margin-left: 0.7em;
-        padding: 0.80em 1.2em;
-        letter-spacing: 0.06em;
-        text-transform: $all-caps;
-        font-size: $medium-txt;
-        outline: 0;
-        color: #333;
-      }
-  
-      &.active a {
-        background: $link-color;
-        border-radius: 5px;
-        color: $white;
-      }
-    }
-  }
-}
+@import 'nav';
 
 //banner
 .banner {
@@ -162,10 +130,8 @@ header {
   background: url('/images/banner.jpg') no-repeat center;
   background-size: cover;
   color: $white;
-
   @include center-element;
 }
-
 
 /* CONTENT
 + ELEMENTS */
@@ -253,12 +219,14 @@ header {
 }
 
 //columns
-$columns: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-  @each $i in $columns {
-    .column-#{$i} {
-      @include make-column((100% / 12) * $i);
+@media all and (min-width: 576px) {
+  $columns: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+    @each $i in $columns {
+      .column-#{$i} {
+        @include make-column((100% / 12) * $i);
+      }
     }
-  }
+}
 
 //images
 .image {
